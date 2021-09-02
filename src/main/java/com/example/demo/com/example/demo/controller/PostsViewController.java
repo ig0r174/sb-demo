@@ -9,13 +9,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.util.List;
-
 @Controller
 public class PostsViewController {
 
     @Autowired
-    private static PostService postsService;
+    private PostService postsService;
 
     @RequestMapping(path = "/", method = RequestMethod.GET)
     public String list(Model model) {
