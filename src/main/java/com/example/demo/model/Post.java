@@ -30,8 +30,12 @@ public class Post {
         return creationDate;
     }
 
-
     public void setLikes(int value) {
         this.likes = value;
     }
+
+    public Long getId(){
+        return this.id;
+    }
+
 }
