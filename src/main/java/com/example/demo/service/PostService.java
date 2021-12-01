@@ -5,9 +5,7 @@ import com.example.demo.repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 @Service
 public class PostService {
@@ -19,9 +17,10 @@ public class PostService {
         return postRepository.findAll();
     }
 
-    public void create(String text) {
+    public Post create(String text) {
         Post post = new Post(null, text, new Date());
         postRepository.save(post);
+        return post;
     }
 
 }
